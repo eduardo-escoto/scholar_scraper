@@ -2,11 +2,12 @@ import time
 import argparse
 from urllib import request
 from urllib.parse import urlparse, parse_qs
+from random import gauss
 
 from bs4 import BeautifulSoup
 from collections import defaultdict
 
-SCRAPE_TIMEOUT_SECONDS = 1
+SCRAPE_TIMEOUT_SECONDS = 1.25
 
 SCHOLAR_BASE_URL = 'https://scholar.google.com/'
 
@@ -102,13 +103,14 @@ if __name__ == '__main__':
         name = get_name_from_person(person_soup)
         scholar_id = get_scholar_id_from_url(url)
         # print(person_soup.prettify())
+        time.sleep(SCRAPE_TIMEOUT_SECONDS + gauss(mu = 0.0, sigma = 0.01))
 
         works = get_works_from_person(person_soup)
         for i, work in enumerate(works[0:3]):
             work_page = read_page_and_get_soup(SCHOLAR_BASE_URL + work['link'])
             work = scrape_work_data(work_page, work)
             works[i] = work
-            time.sleep(SCRAPE_TIMEOUT_SECONDS)
+            time.sleep(SCRAPE_TIMEOUT_SECONDS + gauss(mu = 0.0, sigma = 0.01))
         
         all_data.append({
             "name": name,
