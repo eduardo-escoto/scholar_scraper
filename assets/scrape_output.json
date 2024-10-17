@@ -1,0 +1,706 @@
+[
+  {
+    "name": "UCSD-MUSAIC",
+    "scholar_id": "QNXCv34AAAAJ",
+    "publications": [
+      {
+        "title": "Adversarial audio synthesis",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:_FxGoFyzp5QC",
+        "authors": [
+          "Chris Donahue",
+          "Julian McAuley",
+          "Miller Puckette"
+        ],
+        "publication_date": "2018-02-12",
+        "description": "Audio signals are sampled at high temporal resolutions, and learning to synthesize audio requires capturing structure across a range of timescales. Generative adversarial networks (GANs) have seen wide success at generating images that are both locally and globally coherent, but they have seen little application to audio generation. In this paper we introduce WaveGAN, a first attempt at applying GANs to unsupervised synthesis of raw-waveform audio. WaveGAN is capable of synthesizing one second slices of audio waveforms with global coherence, suitable for sound effect generation. Our experiments demonstrate that, without labels, WaveGAN learns to produce intelligible words when trained on a small-vocabulary speech dataset, and can also synthesize audio from other domains such as drums, bird vocalizations, and piano. We compare WaveGAN to a method which applies GANs designed for image generation on image-like audio feature representations, finding both approaches to be promising.",
+        "total_citations": 813
+      },
+      {
+        "title": "Large-scale contrastive language-audio pretraining with feature fusion and keyword-to-caption augmentation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:Wp0gIr-vW9MC",
+        "authors": [
+          "Yusong Wu",
+          "Ke Chen",
+          "Tianyu Zhang",
+          "Yuchen Hui",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2023-06-04",
+        "conference": "ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        "pages": "1-5",
+        "publisher": "IEEE",
+        "description": "Contrastive learning has shown remarkable success in the field of multimodal representation learning. In this paper, we propose a pipeline of contrastive language-audio pretraining to develop an audio representation by combining audio data with natural language descriptions. To accomplish this target, we first release LAION-Audio-630K, a large collection of 633,526 audio-text pairs from different data sources. Second, we construct a contrastive language-audio pretraining model by considering different audio encoders and text encoders. We incorporate the feature fusion mechanism and keyword-to-caption augmentation into the model design to further enable the model to process audio inputs of variable lengths and enhance the performance. Third, we perform comprehensive experiments to evaluate our model across three tasks: text-to-audio retrieval, zero-shot audio classification, and supervised audio\u00a0\u2026",
+        "total_citations": 368
+      },
+      {
+        "title": "Hts-at: A hierarchical token-semantic audio transformer for sound classification and detection",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:aqlVkmm33-oC",
+        "authors": [
+          "Ke Chen",
+          "Xingjian Du",
+          "Bilei Zhu",
+          "Zejun Ma",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2022-05-23",
+        "conference": "ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        "pages": "646-650",
+        "publisher": "IEEE",
+        "description": "Audio classification is an important task of mapping audio samples into their corresponding labels. Recently, the transformer model with self-attention mechanisms has been adopted in this field. However, existing audio transformers require large GPU memories and long training time, meanwhile relying on pretrained vision models to achieve high performance, which limits the model\u2019s scalability in audio tasks. To combat these problems, we introduce HTS-AT: an audio transformer with a hierarchical structure to reduce the model size and training time. It is further combined with a token-semantic module to map final outputs into class featuremaps, thus enabling the model for the audio event detection (i.e. localization in time). We evaluate HTS-AT on three datasets of audio classification where it achieves new state-of-the-art (SOTA) results on AudioSet and ESC50, and equals the SOTA on Speech Command V2. It\u00a0\u2026",
+        "total_citations": 199
+      },
+      {
+        "title": "LakhNES: Improving multi-instrumental music generation with cross-domain pre-training",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:Tyk-4Ss8FVUC",
+        "authors": [
+          "Chris Donahue",
+          "Huanru Henry Mao",
+          "Yiting Ethan Li",
+          "Garrison W Cottrell",
+          "Julian McAuley"
+        ],
+        "publication_date": "2019-07-10",
+        "description": "We are interested in the task of generating multi-instrumental music scores. The Transformer architecture has recently shown great promise for the task of piano score generation; here we adapt it to the multi-instrumental setting. Transformers are complex, high-dimensional language models which are capable of capturing long-term structure in sequence data, but require large amounts of data to fit. Their success on piano score generation is partially explained by the large volumes of symbolic data readily available for that domain. We leverage the recently-introduced NES-MDB dataset of four-instrument scores from an early video game sound synthesis chip (the NES), which we find to be well-suited to training with the Transformer architecture. To further improve the performance of our model, we propose a pre-training technique to leverage the information in a large collection of heterogeneous music, namely the Lakh MIDI dataset. Despite differences between the two corpora, we find that this transfer learning procedure improves both quantitative and qualitative performance for our primary task.",
+        "total_citations": 151
+      },
+      {
+        "title": "Muspy: A toolkit for symbolic music generation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:W7OEmFMy1HYC",
+        "authors": [
+          "Hao-Wen Dong",
+          "Ke Chen",
+          "Julian McAuley",
+          "Taylor Berg-Kirkpatrick"
+        ],
+        "publication_date": "2020-08-05",
+        "description": "In this paper, we present MusPy, an open source Python library for symbolic music generation. MusPy provides easy-to-use tools for essential components in a music generation system, including dataset management, data I/O, data preprocessing and model evaluation. In order to showcase its potential, we present statistical analysis of the eleven datasets currently supported by MusPy. Moreover, we conduct a cross-dataset generalizability experiment by training an autoregressive model on each dataset and measuring held-out likelihood on the others---a process which is made easier by MusPy's dataset management system. The results provide a map of domain overlap between various commonly used datasets and show that some datasets contain more representative cross-genre samples than others. Along with the dataset analysis, these results might serve as a guide for choosing datasets in future research. Source code and documentation are available at https://github.com/salu133445/muspy .",
+        "total_citations": 75
+      },
+      {
+        "title": "The effect of explicit structure encoding of deep neural networks for symbolic music generation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:KlAtU1dfN6UC",
+        "authors": [
+          "Ke Chen",
+          "Weilin Zhang",
+          "Shlomo Dubnov",
+          "Gus Xia",
+          "Wei Li"
+        ],
+        "publication_date": "2019-01-23",
+        "conference": "2019 International workshop on multilayer music representation and processing (MMRP)",
+        "pages": "77-84",
+        "publisher": "IEEE",
+        "description": "With recent breakthroughs in artificial neural networks, deep generative models have become one of the leading techniques for computational creativity. Despite very promising progress on image and short sequence generation, symbolic music generation remains a challenging problem since the structure of compositions are usually complicated. In this study, we attempt to solve the melody generation problem constrained by the given chord progression. In particular, we explore the effect of explicit architectural encoding of musical structure via comparing two sequential generative models: LSTM (a type of RNN) and WaveNet (dilated temporal-CNN). As far as we know, this is the first study of applying WaveNet to symbolic music generation, as well as the first systematic comparison between temporal-CNN and RNN for music generation. We conduct a survey for evaluation in our generations and implemented\u00a0\u2026",
+        "total_citations": 71
+      },
+      {
+        "title": "Dance dance convolution",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:ufrVoPGSRksC",
+        "authors": [
+          "Chris Donahue",
+          "Zachary C Lipton",
+          "Julian McAuley"
+        ],
+        "publication_date": "2017-07-17",
+        "conference": "International conference on machine learning",
+        "pages": "1039-1048",
+        "publisher": "PMLR",
+        "description": "Dance Dance Revolution (DDR) is a popular rhythm-based video game. Players perform steps on a dance platform in synchronization with music as directed by on-screen step charts. While many step charts are available in standardized packs, players may grow tired of existing charts, or wish to dance to a song for which no chart exists. We introduce the task of learning to choreograph. Given a raw audio track, the goal is to produce a new step chart. This task decomposes naturally into two subtasks: deciding when to place steps and deciding which steps to select. For the step placement task, we combine recurrent and convolutional neural networks to ingest spectrograms of low-level audio features to predict steps, conditioned on chart difficulty. For step selection, we present a conditional LSTM generative model that substantially outperforms n-gram and fixed-window approaches.",
+        "total_citations": 67
+      },
+      {
+        "title": "Music sketchnet: Controllable music generation via factorized representations of pitch and rhythm",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:Zph67rFs4hoC",
+        "authors": [
+          "Ke Chen",
+          "Cheng-i Wang",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2020-08-04",
+        "description": "Drawing an analogy with automatic image completion systems, we propose Music SketchNet, a neural network framework that allows users to specify partial musical ideas guiding automatic music generation. We focus on generating the missing measures in incomplete monophonic musical pieces, conditioned on surrounding context, and optionally guided by user-specified pitch and rhythm snippets. First, we introduce SketchVAE, a novel variational autoencoder that explicitly factorizes rhythm and pitch contour to form the basis of our proposed model. Then we introduce two discriminative architectures, SketchInpainter and SketchConnector, that in conjunction perform the guided music completion, filling in representations for the missing measures conditioned on surrounding context and user-specified snippets. We evaluate SketchNet on a standard dataset of Irish folk music and compare with models from recent works. When used for music completion, our approach outperforms the state-of-the-art both in terms of objective metrics and subjective listening tests. Finally, we demonstrate that our model can successfully incorporate user-specified snippets during the generation process.",
+        "total_citations": 63
+      },
+      {
+        "title": "Multitrack music transformer",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:roLk4NBRz8UC",
+        "authors": [
+          "Hao-Wen Dong",
+          "Ke Chen",
+          "Shlomo Dubnov",
+          "Julian McAuley",
+          "Taylor Berg-Kirkpatrick"
+        ],
+        "publication_date": "2023-06-04",
+        "conference": "ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        "pages": "1-5",
+        "publisher": "IEEE",
+        "description": "Existing approaches for generating multitrack music with transformer models have been limited in terms of the number of instruments, the length of the music segments and slow inference. This is partly due to the memory requirements of the lengthy input sequences necessitated by existing representations. In this work, we propose a new multitrack music representation that allows a diverse set of instruments while keeping a short sequence length. Our proposed Multitrack Music Transformer (MMT) achieves comparable performance with state-of-the-art systems, landing in between two recently proposed models in a subjective listening test, while achieving substantial speedups and memory reductions over both, making the method attractive for real time improvisation or near real time creative applications. Further, we propose a new measure for analyzing musical self-attention and show that the trained model\u00a0\u2026",
+        "total_citations": 55
+      },
+      {
+        "title": "Musicldm: Enhancing novelty in text-to-music generation using beat-synchronous mixup strategies",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:kNdYIx-mwKoC",
+        "authors": [
+          "Ke Chen",
+          "Yusong Wu",
+          "Haohe Liu",
+          "Marianna Nezhurina",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2024-04-14",
+        "conference": "ICASSP 2024-2024 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        "pages": "1206-1210",
+        "publisher": "IEEE",
+        "description": "Diffusion models have shown promising results in cross-modal generation tasks, including text-to-image and text-to-audio generation. However, generating music, as a special type of audio, presents unique challenges due to limited availability of music data and sensitive issues related to copyright and plagiarism. In this paper, to tackle these challenges, we first construct a state-of-the-art text-to-music model, MusicLDM, that adapts Stable Diffusion and AudioLDM architectures to the music domain. Then, to address the limitations of training data and to avoid plagiarism, we leverage a beat tracking model and propose two different mixup strategies for data augmentation: beat-synchronous audio mixup and beat-synchronous latent mixup, which recombine training audio directly or via a latent embeddings space, respectively. Such mixup strategies encourage the model to interpolate between musical training samples\u00a0\u2026",
+        "total_citations": 49
+      },
+      {
+        "title": "The NES music database: A multi-instrumental dataset with expressive performance attributes",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:zYLM7Y9cAGgC",
+        "authors": [
+          "Chris Donahue",
+          "Huanru Henry Mao",
+          "Julian McAuley"
+        ],
+        "publication_date": "2018-06-12",
+        "description": "Existing research on music generation focuses on composition, but often ignores the expressive performance characteristics required for plausible renditions of resultant pieces. In this paper, we introduce the Nintendo Entertainment System Music Database (NES-MDB), a large corpus allowing for separate examination of the tasks of composition and performance. NES-MDB contains thousands of multi-instrumental songs composed for playback by the compositionally-constrained NES audio synthesizer. For each song, the dataset contains a musical score for four instrument voices as well as expressive attributes for the dynamics and timbre of each voice. Unlike datasets comprised of General MIDI files, NES-MDB includes all of the information needed to render exact acoustic performances of the original compositions. Alongside the dataset, we provide a tool that renders generated compositions as NES-style audio by emulating the device's audio processor. Additionally, we establish baselines for the tasks of composition, which consists of learning the semantics of composing for the NES synthesizer, and performance, which involves finding a mapping between a composition and realistic expressive attributes.",
+        "total_citations": 38
+      },
+      {
+        "title": "Zero-shot audio source separation through query-based learning from weakly-labeled data",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:4DMP91E08xMC",
+        "authors": [
+          "Ke Chen",
+          "Xingjian Du",
+          "Bilei Zhu",
+          "Zejun Ma",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2022-06-28",
+        "pages": "4441-4449",
+        "description": "Deep learning techniques for separating audio into different sound sources face several challenges. Standard architectures require training separate models for different types of audio sources. Although some universal separators employ a single model to target multiple sources, they have difficulty generalizing to unseen sources. In this paper, we propose a three-component pipeline to train a universal audio source separator from a large, but weakly-labeled dataset: AudioSet. First, we propose a transformer-based sound event detection system for processing weakly-labeled training data. Second, we devise a query-based audio separation model that leverages this data for model training. Third, we design a latent embedding processor to encode queries that specify audio targets for separation, allowing for zero-shot generalization. Our approach uses a single model for source separation of multiple sound types, and relies solely on weakly-labeled data for training. In addition, the proposed audio separator can be used in a zero-shot setting, learning to separate types of audio sources that were never seen in training. To evaluate the separation performance, we test our model on MUSDB18, while training on the disjoint AudioSet. We further verify the zero-shot performance by conducting another experiment on audio source types that are held-out from training. The model achieves comparable Source-to-Distortion Ratio (SDR) performance to current supervised models in both cases.",
+        "total_citations": 32
+      },
+      {
+        "title": "Deep performer: Score-to-audio music performance synthesis",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:5nxA0vEk-isC",
+        "authors": [
+          "Hao-Wen Dong",
+          "Cong Zhou",
+          "Taylor Berg-Kirkpatrick",
+          "Julian McAuley"
+        ],
+        "publication_date": "2022-05-23",
+        "conference": "ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        "pages": "951-955",
+        "publisher": "IEEE",
+        "description": "Music performance synthesis aims to synthesize a musical score into a natural performance. In this paper, we borrow recent advances in text-to-speech synthesis and present the Deep Performer\u2014a novel system for score-to-audio music performance synthesis. Unlike speech, music often contains polyphony and long notes. Hence, we propose two new techniques for handling polyphonic inputs and providing a fine-grained conditioning in a transformer encoder-decoder model. To train our proposed system, we present a new violin dataset consisting of paired recordings and scores along with estimated alignments between them. We show that our proposed model can synthesize music with clear polyphony and harmonic structures. In a listening test, we achieve competitive quality against the baseline model, a conditional generative audio model, in terms of pitch accuracy, timbre and noise level. Moreover, our\u00a0\u2026",
+        "total_citations": 25
+      },
+      {
+        "title": "Continuous melody generation via disentangled short-term representations and structural conditions",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:3fE2CSJIrl8C",
+        "authors": [
+          "Ke Chen",
+          "Gus Xia",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2020-02-03",
+        "conference": "2020 IEEE 14th International Conference on Semantic Computing (ICSC)",
+        "pages": "128-135",
+        "publisher": "IEEE",
+        "description": "Automatic music generation is an interdisciplinary research topic that combines computational creativity and semantic analysis of music to create automatic machine improvisations. An important property of such a system is allowing the user to specify conditions and desired properties of the generated music. In this paper we designed a model for composing melodies given a user specified symbolic scenario combined with a previous music context. We add manual labeled vectors denoting external music quality in terms of chord function that provides a low dimensional representation of the harmonic tension and resolution. Our model is capable of generating long melodies by regarding 8-beat note sequences as basic units, and shares consistent rhythm pattern structure with another specific song. The model contains two stages and requires separate training where the first stage adopts a Conditional Variational\u00a0\u2026",
+        "total_citations": 22
+      },
+      {
+        "title": "Clipsep: Learning text-queried sound separation with noisy unlabeled videos",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:LkGwnXOMwfcC",
+        "authors": [
+          "Hao-Wen Dong",
+          "Naoya Takahashi",
+          "Yuki Mitsufuji",
+          "Julian McAuley",
+          "Taylor Berg-Kirkpatrick"
+        ],
+        "publication_date": "2022-12-14",
+        "description": "Recent years have seen progress beyond domain-specific sound separation for speech or music towards universal sound separation for arbitrary sounds. Prior work on universal sound separation has investigated separating a target sound out of an audio mixture given a text query. Such text-queried sound separation systems provide a natural and scalable interface for specifying arbitrary target sounds. However, supervised text-queried sound separation systems require costly labeled audio-text pairs for training. Moreover, the audio provided in existing datasets is often recorded in a controlled environment, causing a considerable generalization gap to noisy audio in the wild. In this work, we aim to approach text-queried universal sound separation by using only unlabeled data. We propose to leverage the visual modality as a bridge to learn the desired audio-textual correspondence. The proposed CLIPSep model first encodes the input query into a query vector using the contrastive language-image pretraining (CLIP) model, and the query vector is then used to condition an audio separation model to separate out the target sound. While the model is trained on image-audio pairs extracted from unlabeled videos, at test time we can instead query the model with text inputs in a zero-shot setting, thanks to the joint language-image embedding learned by the CLIP model. Further, videos in the wild often contain off-screen sounds and background noise that may hinder the model from learning the desired audio-textual correspondence. To address this problem, we further propose an approach called noise invariant training for training a query-based\u00a0\u2026",
+        "total_citations": 20
+      },
+      {
+        "title": "Ditto: Diffusion inference-time t-optimization for music generation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:u-x6o8ySG0sC",
+        "authors": [
+          "Zachary Novack",
+          "Julian McAuley",
+          "Taylor Berg-Kirkpatrick",
+          "Nicholas J Bryan"
+        ],
+        "publication_date": "2024-01-22",
+        "description": "We propose Diffusion Inference-Time T-Optimization (DITTO), a general-purpose frame-work for controlling pre-trained text-to-music diffusion models at inference-time via optimizing initial noise latents. Our method can be used to optimize through any differentiable feature matching loss to achieve a target (stylized) output and leverages gradient checkpointing for memory efficiency. We demonstrate a surprisingly wide-range of applications for music generation including inpainting, outpainting, and looping as well as intensity, melody, and musical structure control - all without ever fine-tuning the underlying model. When we compare our approach against related training, guidance, and optimization-based methods, we find DITTO achieves state-of-the-art performance on nearly all tasks, including outperforming comparable approaches on controllability, audio quality, and computational efficiency, thus opening the door for high-quality, flexible, training-free control of diffusion models. Sound examples can be found at https://DITTO-Music.github.io/web/.",
+        "total_citations": 16
+      },
+      {
+        "title": "Universal source separation with weakly labelled data",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:YOwf2qJgpHMC",
+        "authors": [
+          "Qiuqiang Kong",
+          "Ke Chen",
+          "Haohe Liu",
+          "Xingjian Du",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov",
+          "Mark D Plumbley"
+        ],
+        "publication_date": "2023-05-11",
+        "description": "Universal source separation (USS) is a fundamental research task for computational auditory scene analysis, which aims to separate mono recordings into individual source tracks. There are three potential challenges awaiting the solution to the audio source separation task. First, previous audio source separation systems mainly focus on separating one or a limited number of specific sources. There is a lack of research on building a unified system that can separate arbitrary sources via a single model. Second, most previous systems require clean source data to train a separator, while clean source data are scarce. Third, there is a lack of USS system that can automatically detect and separate active sound classes in a hierarchical level. To use large-scale weakly labeled/unlabeled audio data for audio source separation, we propose a universal audio source separation framework containing: 1) an audio tagging model trained on weakly labeled data as a query net; and 2) a conditional source separation model that takes query net outputs as conditions to separate arbitrary sound sources. We investigate various query nets, source separation models, and training strategies and propose a hierarchical USS strategy to automatically detect and separate sound classes from the AudioSet ontology. By solely leveraging the weakly labelled AudioSet, our USS system is successful in separating a wide variety of sound classes, including sound event separation, music source separation, and speech enhancement. The USS system achieves an average signal-to-distortion ratio improvement (SDRi) of 5.57 dB over 527 sound classes of AudioSet; 10.57 dB\u00a0\u2026",
+        "total_citations": 16
+      },
+      {
+        "title": "Tonet: Tone-octave network for singing melody extraction from polyphonic music",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:ULOm3_A8WrAC",
+        "authors": [
+          "Ke Chen",
+          "Shuai Yu",
+          "Cheng-i Wang",
+          "Wei Li",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2022-05-23",
+        "conference": "ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+        "pages": "621-625",
+        "publisher": "IEEE",
+        "description": "Singing melody extraction is an important problem in the field of music information retrieval. Existing methods typically rely on frequency-domain representations to estimate the sung frequencies. However, this design does not lead to human-level performance in the perception of melody information for both tone (pitch-class) and octave. In this paper, we propose TONet 1 , a plug-and-play model that improves both tone and octave perceptions by leveraging a novel input representation and a novel network architecture. First, we present an improved input representation, the Tone-CFP, that explicitly groups harmonics via a rearrangement of frequency-bins. Second, we introduce an encoder-decoder architecture that is designed to obtain a salience feature map, a tone feature map, and an octave feature map. Third, we propose a tone-octave fusion mechanism to improve the final salience feature map. Experiments\u00a0\u2026",
+        "total_citations": 16
+      },
+      {
+        "title": "An empirical evaluation of end-to-end polyphonic optical music recognition",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:hqOjcs7Dif8C",
+        "authors": [
+          "Sachinda Edirisooriya",
+          "Hao-Wen Dong",
+          "Julian McAuley",
+          "Taylor Berg-Kirkpatrick"
+        ],
+        "publication_date": "2021-08-03",
+        "description": "Previous work has shown that neural architectures are able to perform optical music recognition (OMR) on monophonic and homophonic music with high accuracy. However, piano and orchestral scores frequently exhibit polyphonic passages, which add a second dimension to the task. Monophonic and homophonic music can be described as homorhythmic, or having a single musical rhythm. Polyphonic music, on the other hand, can be seen as having multiple rhythmic sequences, or voices, concurrently. We first introduce a workflow for creating large-scale polyphonic datasets suitable for end-to-end recognition from sheet music publicly available on the MuseScore forum. We then propose two novel formulations for end-to-end polyphonic OMR -- one treating the problem as a type of multi-task binary classification, and the other treating it as multi-sequence detection. Building upon the encoder-decoder architecture and an image encoder proposed in past work on end-to-end OMR, we propose two novel decoder models -- FlagDecoder and RNNDecoder -- that correspond to the two formulations. Finally, we compare the empirical performance of these end-to-end approaches to polyphonic OMR and observe a new state-of-the-art performance with our multi-sequence detection decoder, RNNDecoder.",
+        "total_citations": 16
+      },
+      {
+        "title": "CLIPSonic: Text-to-audio synthesis with unlabeled videos and pretrained language-vision models",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:0EnyYjriUFMC",
+        "authors": [
+          "Hao-Wen Dong",
+          "Xiaoyu Liu",
+          "Jordi Pons",
+          "Gautam Bhattacharya",
+          "Santiago Pascual",
+          "Joan Serr\u00e0",
+          "Taylor Berg-Kirkpatrick",
+          "Julian McAuley"
+        ],
+        "publication_date": "2023-10-22",
+        "conference": "2023 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA)",
+        "pages": "1-5",
+        "publisher": "IEEE",
+        "description": "Recent work has studied text-to-audio synthesis using large amounts of paired text-audio data. However, audio recordings with high-quality text annotations can be difficult to acquire. In this work, we approach text-to-audio synthesis using unlabeled videos and pre-trained language-vision models. We propose to learn the desired text-audio correspondence by leveraging the visual modality as a bridge. We train a conditional diffusion model to generate the audio track of a video, given a video frame encoded by a pretrained contrastive language-image pretraining (CLIP) model. At test time, we first explore performing a zero-shot modality transfer and condition the diffusion model with a CLIP-encoded text query. However, we observe a noticeable performance drop with respect to image queries. To close this gap, we further adopt a pretrained diffusion prior model to generate a CLIP image embedding given a CLIP\u00a0\u2026",
+        "total_citations": 12
+      },
+      {
+        "title": "Towards automatic instrumentation by learning to separate parts in symbolic multitrack music",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:Y0pCki6q_DkC",
+        "authors": [
+          "Hao-Wen Dong",
+          "Chris Donahue",
+          "Taylor Berg-Kirkpatrick",
+          "Julian McAuley"
+        ],
+        "publication_date": "2021-07-13",
+        "description": "Modern keyboards allow a musician to play multiple instruments at the same time by assigning zones -- fixed pitch ranges of the keyboard -- to different instruments. In this paper, we aim to further extend this idea and examine the feasibility of automatic instrumentation -- dynamically assigning instruments to notes in solo music during performance. In addition to the online, real-time-capable setting for performative use cases, automatic instrumentation can also find applications in assistive composing tools in an offline setting. Due to the lack of paired data of original solo music and their full arrangements, we approach automatic instrumentation by learning to separate parts (e.g., voices, instruments and tracks) from their mixture in symbolic multitrack music, assuming that the mixture is to be played on a keyboard. We frame the task of part separation as a sequential multi-class classification problem and adopt machine learning to map sequences of notes into sequences of part labels. To examine the effectiveness of our proposed models, we conduct a comprehensive empirical evaluation over four diverse datasets of different genres and ensembles -- Bach chorales, string quartets, game music and pop music. Our experiments show that the proposed models outperform various baselines. We also demonstrate the potential for our proposed models to produce alternative convincing instrumentations for an existing arrangement by separating its mixture into parts. All source code and audio samples can be found at https://salu133445.github.io/arranger/ .",
+        "total_citations": 7
+      },
+      {
+        "title": "Improving choral music separation through expressive synthesized data from sampled instruments",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:UebtZRa9Y70C",
+        "authors": [
+          "Ke Chen",
+          "Hao-Wen Dong",
+          "Yi Luo",
+          "Julian McAuley",
+          "Taylor Berg-Kirkpatrick",
+          "Miller Puckette",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2022-09-07",
+        "description": "Choral music separation refers to the task of extracting tracks of voice parts (e.g., soprano, alto, tenor, and bass) from mixed audio. The lack of datasets has impeded research on this topic as previous work has only been able to train and evaluate models on a few minutes of choral music data due to copyright issues and dataset collection difficulties. In this paper, we investigate the use of synthesized training data for the source separation task on real choral music. We make three contributions: first, we provide an automated pipeline for synthesizing choral music data from sampled instrument plugins within controllable options for instrument expressiveness. This produces an 8.2-hour-long choral music dataset from the JSB Chorales Dataset and one can easily synthesize additional data. Second, we conduct an experiment to evaluate multiple separation models on available choral music separation datasets from previous work. To the best of our knowledge, this is the first experiment to comprehensively evaluate choral music separation. Third, experiments demonstrate that the synthesized choral data is of sufficient quality to improve the model's performance on real choral music datasets. This provides additional experimental statistics and data support for the choral music separation study.",
+        "total_citations": 5
+      },
+      {
+        "title": "Discovering music relations with sequential attention",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:ZeXyd9-uunAC",
+        "authors": [
+          "Junyan Jiang",
+          "Gus Xia",
+          "Taylor Berg-Kirkpatrick"
+        ],
+        "publication_date": "2020-10-16",
+        "conference": "Proceedings of the 1st workshop on nlp for music and audio (nlp4musa)",
+        "pages": "1-5",
+        "description": "The element-wise attention mechanism has been widely used in modern sequence models for text and music. The original attention mechanism focuses on token-level similarity to determine the attention weights. However, these models have difficulty capturing sequence-level relations in music, including repetition, retrograde, and sequences. In this paper, we introduce a new attention module called the sequential attention (SeqAttn), which calculates attention weights based on the similarity between pairs of sub-sequences rather than individual tokens. We show that the module is more powerful at capturing sequence-level music relations than the original design. The module shows potential in both music relation discovery and music generation. 1",
+        "total_citations": 5
+      },
+      {
+        "title": "Deep and shallow: Machine learning in music and audio",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:qUcmZB5y_30C",
+        "authors": [
+          "Shlomo Dubnov",
+          "Ross Greer"
+        ],
+        "publication_date": "2023-12-08",
+        "publisher": "CRC Press",
+        "description": "Providing an essential and unique bridge between the theories of signal processing, machine learning, and artificial intelligence (AI) in music, this book provides a holistic overview of foundational ideas in music, from the physical and mathematical properties of sound to symbolic representations. Combining signals and language models in one place, this book explores how sound may be represented and manipulated by computer systems, and how our devices may come to recognize particular sonic patterns as musically meaningful or creative through the lens of information theory. Introducing popular fundamental ideas in AI at a comfortable pace, more complex discussions around implementations and implications in musical creativity are gradually incorporated as the book progresses. Each chapter is accompanied by guided programming activities designed to familiarize readers with practical implications of discussed theory, without the frustrations of free-form coding. Surveying state-of-the art methods in applications of deep neural networks to audio and sound computing, as well as offering a research perspective that suggests future challenges in music and AI research, this book appeals to both students of AI and music, as well as industry professionals in the fields of machine learning, music, and AI.",
+        "total_citations": 4
+      },
+      {
+        "title": "Checklist models for improved output fluency in piano fingering prediction",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:IWHjjKOFINEC",
+        "authors": [
+          "Nikita Srivatsan",
+          "Taylor Berg-Kirkpatrick"
+        ],
+        "publication_date": "2022-09-12",
+        "description": "In this work we present a new approach for the task of predicting fingerings for piano music. While prior neural approaches have often treated this as a sequence tagging problem with independent predictions, we put forward a checklist system, trained via reinforcement learning, that maintains a representation of recent predictions in addition to a hidden state, allowing it to learn soft constraints on output structure. We also demonstrate that by modifying input representations -- which in prior work using neural models have often taken the form of one-hot encodings over individual keys on the piano -- to encode relative position on the keyboard to the prior note instead, we can achieve much better performance. Additionally, we reassess the use of raw per-note labeling precision as an evaluation metric, noting that it does not adequately measure the fluency, i.e. human playability, of a model's output. To this end, we compare methods across several statistics which track the frequency of adjacent finger predictions that while independently reasonable would be physically challenging to perform in sequence, and implement a reinforcement learning strategy to minimize these as part of our training loss. Finally through human expert evaluation, we demonstrate significant gains in performability directly attributable to improvements with respect to these metrics.",
+        "total_citations": 3
+      },
+      {
+        "title": "Music Enhancement with Deep Filters: A Technical Report for The ICASSP 2024 Cadenza Challenge",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:_kc_bZDykSQC",
+        "authors": [
+          "Keren Shao",
+          "Ke Chen",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2024-04-17",
+        "description": "In this challenge, we disentangle the deep filters from the original DeepfilterNet and incorporate them into our Spec-UNet-based network to further improve a hybrid Demucs (hdemucs) based remixing pipeline. The motivation behind the use of the deep filter component lies at its potential in better handling temporal fine structures. We demonstrate an incremental improvement in both the Signal-to-Distortion Ratio (SDR) and the Hearing Aid Audio Quality Index (HAAQI) metrics when comparing the performance of hdemucs against different versions of our model.",
+        "total_citations": 2
+      },
+      {
+        "title": "Multi-Track MusicLDM: Towards Versatile Music Generation with Latent Diffusion Model",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:M3ejUd6NZC8C",
+        "authors": [
+          "Tornike Karchkhadze",
+          "Mohammad Rasool Izadi",
+          "Ke Chen",
+          "Gerard Assayag",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2024-09-04",
+        "description": "Diffusion models have shown promising results in cross-modal generation tasks involving audio and music, such as text-to-sound and text-to-music generation. These text-controlled music generation models typically focus on generating music by capturing global musical attributes like genre and mood. However, music composition is a complex, multilayered task that often involves musical arrangement as an integral part of the process. This process involves composing each instrument to align with existing ones in terms of beat, dynamics, harmony, and melody, requiring greater precision and control over tracks than text prompts usually provide. In this work, we address these challenges by extending the MusicLDM, a latent diffusion model for music, into a multi-track generative model. By learning the joint probability of tracks sharing a context, our model is capable of generating music across several tracks that correspond well to each other, either conditionally or unconditionally. Additionally, our model is capable of arrangement generation, where the model can generate any subset of tracks given the others (e.g., generating a piano track complementing given bass and drum tracks). We compared our model with an existing multi-track generative model and demonstrated that our model achieves considerable improvements across objective metrics for both total and arrangement generation tasks.",
+        "total_citations": 1
+      },
+      {
+        "title": "Emotion-driven Piano Music Generation via Two-stage Disentanglement and Functional Representation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:IjCSPb-OGe4C",
+        "authors": [
+          "Jingyue Huang",
+          "Ke Chen",
+          "Yi-Hsuan Yang"
+        ],
+        "publication_date": "2024-07-30",
+        "description": "Managing the emotional aspect remains a challenge in automatic music generation. Prior works aim to learn various emotions at once, leading to inadequate modeling. This paper explores the disentanglement of emotions in piano performance generation through a two-stage framework. The first stage focuses on valence modeling of lead sheet, and the second stage addresses arousal modeling by introducing performance-level attributes. To further capture features that shape valence, an aspect less explored by previous approaches, we introduce a novel functional representation of symbolic music. This representation aims to capture the emotional impact of major-minor tonality, as well as the interactions among notes, chords, and key signatures. Objective and subjective experiments validate the effectiveness of our framework in both emotional valence and arousal modeling. We further leverage our framework in a novel application of emotional controls, showing a broad potential in emotion-driven music generation.",
+        "total_citations": 1
+      },
+      {
+        "title": "Futga: Towards Fine-grained Music Understanding through Temporally-enhanced Generative Augmentation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:d1gkVwhDpl0C",
+        "authors": [
+          "Junda Wu",
+          "Zachary Novack",
+          "Amit Namburi",
+          "Jiaheng Dai",
+          "Hao-Wen Dong",
+          "Zhouhang Xie",
+          "Carol Chen",
+          "Julian McAuley"
+        ],
+        "publication_date": "2024-07-29",
+        "description": "Existing music captioning methods are limited to generating concise global descriptions of short music clips, which fail to capture fine-grained musical characteristics and time-aware musical changes. To address these limitations, we propose FUTGA, a model equipped with fined-grained music understanding capabilities through learning from generative augmentation with temporal compositions. We leverage existing music caption datasets and large language models (LLMs) to synthesize fine-grained music captions with structural descriptions and time boundaries for full-length songs. Augmented by the proposed synthetic dataset, FUTGA is enabled to identify the music's temporal changes at key transition points and their musical functions, as well as generate detailed descriptions for each music segment. We further introduce a full-length music caption dataset generated by FUTGA, as the augmentation of the MusicCaps and the Song Describer datasets. We evaluate the automatically generated captions on several downstream tasks, including music generation and retrieval. The experiments demonstrate the quality of the generated captions and the better performance in various downstream tasks achieved by the proposed music captioning approach. Our code and datasets can be found in \\href{https://huggingface.co/JoshuaW1997/FUTGA}{\\textcolor{blue}{https://huggingface.co/JoshuaW1997/FUTGA}}.",
+        "total_citations": 1
+      },
+      {
+        "title": "Audio Prompt Adapter: Unleashing Music Editing Abilities for Text-to-Music with Lightweight Finetuning",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:qjMakFHDy7sC",
+        "authors": [
+          "Fang-Duo Tsai",
+          "Shih-Lun Wu",
+          "Haven Kim",
+          "Bo-Yu Chen",
+          "Hao-Chung Cheng",
+          "Yi-Hsuan Yang"
+        ],
+        "publication_date": "2024-07-23",
+        "description": "Text-to-music models allow users to generate nearly realistic musical audio with textual commands. However, editing music audios remains challenging due to the conflicting desiderata of performing fine-grained alterations on the audio while maintaining a simple user interface. To address this challenge, we propose Audio Prompt Adapter (or AP-Adapter), a lightweight addition to pretrained text-to-music models. We utilize AudioMAE to extract features from the input audio, and construct attention-based adapters to feedthese features into the internal layers of AudioLDM2, a diffusion-based text-to-music model. With 22M trainable parameters, AP-Adapter empowers users to harness both global (e.g., genre and timbre) and local (e.g., melody) aspects of music, using the original audio and a short text as inputs. Through objective and subjective studies, we evaluate AP-Adapter on three tasks: timbre transfer, genre transfer, and accompaniment generation. Additionally, we demonstrate its effectiveness on out-of-domain audios containing unseen instruments during training.",
+        "total_citations": 1
+      },
+      {
+        "title": "DITTO-2: Distilled Diffusion Inference-Time T-Optimization for Music Generation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:u5HHmVD_uO8C",
+        "authors": [
+          "Zachary Novack",
+          "Julian McAuley",
+          "Taylor Berg-Kirkpatrick",
+          "Nicholas Bryan"
+        ],
+        "publication_date": "2024-05-30",
+        "description": "Controllable music generation methods are critical for human-centered AI-based music creation, but are currently limited by speed, quality, and control design trade-offs. Diffusion Inference-Time T-optimization (DITTO), in particular, offers state-of-the-art results, but is over 10x slower than real-time, limiting practical use. We propose Distilled Diffusion Inference-Time T -Optimization (or DITTO-2), a new method to speed up inference-time optimization-based control and unlock faster-than-real-time generation for a wide-variety of applications such as music inpainting, outpainting, intensity, melody, and musical structure control. Our method works by (1) distilling a pre-trained diffusion model for fast sampling via an efficient, modified consistency or consistency trajectory distillation process (2) performing inference-time optimization using our distilled model with one-step sampling as an efficient surrogate optimization task and (3) running a final multi-step sampling generation (decoding) using our estimated noise latents for best-quality, fast, controllable generation. Through thorough evaluation, we find our method not only speeds up generation over 10-20x, but simultaneously improves control adherence and generation quality all at once. Furthermore, we apply our approach to a new application of maximizing text adherence (CLAP score) and show we can convert an unconditional diffusion model without text inputs into a model that yields state-of-the-art text control. Sound examples can be found at https://ditto-music.github.io/ditto2/.",
+        "total_citations": 1
+      },
+      {
+        "title": "Latent CLAP Loss for Better Foley Sound Synthesis",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:-f6ydRqryjwC",
+        "authors": [
+          "Tornike Karchkhadze",
+          "Hassan Salami Kavaki",
+          "Mohammad Rasool Izadi",
+          "Bryce Irvin",
+          "Mikolaj Kegler",
+          "Ari Hertz",
+          "Shuo Zhang",
+          "Marko Stamenovic"
+        ],
+        "publication_date": "2024-03-18",
+        "description": "Foley sound generation, the art of creating audio for multimedia, has recently seen notable advancements through text-conditioned latent diffusion models. These systems use multimodal text-audio representation models, such as Contrastive Language-Audio Pretraining (CLAP), whose objective is to map corresponding audio and text prompts into a joint embedding space. AudioLDM, a text-to-audio model, was the winner of the DCASE2023 task 7 Foley sound synthesis challenge. The winning system fine-tuned the model for specific audio classes and applied a post-filtering method using CLAP similarity scores between output audio and input text at inference time, requiring the generation of extra samples, thus reducing data generation efficiency. We introduce a new loss term to enhance Foley sound generation in AudioLDM without post-filtering. This loss term uses a new module based on the CLAP mode-Latent CLAP encode-to align the latent diffusion output with real audio in a shared CLAP embedding space. Our experiments demonstrate that our method effectively reduces the Frechet Audio Distance (FAD) score of the generated audio and eliminates the need for post-filtering, thus enhancing generation efficiency.",
+        "total_citations": 1
+      },
+      {
+        "title": "Retrieval guided music captioning via multimodal prefixes",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:4TOpqqG69KYC",
+        "authors": [
+          "Nikita Srivatsan",
+          "Ke Chen",
+          "Shlomo Dubnov",
+          "Taylor Berg-Kirkpatrick"
+        ],
+        "publication_date": "2024-10-16",
+        "description": "In this paper we put forward a new approach to music captioning, the task of automatically generating natural language descriptions for songs. These descriptions are useful both for categorization and analysis, and also from an accessibility standpoint as they form an important component of closed captions for video content. Our method supplements an audio encoding with a retriever, allowing the decoder to condition on multimodal signal both from the audio of the song itself as well as a candidate caption identified by a nearest neighbor system. This lets us retain the advantages of a retrieval based approach while also allowing for the flexibility of a generative one. We evaluate this system on a dataset of 200k music-caption pairs scraped from Audiostock, a royalty-free music platform, and on MusicCaps, a dataset of 5.5 k pairs. We demonstrate significant improvements over prior systems across both automatic metrics and human evaluation.",
+        "total_citations": 1
+      },
+      {
+        "title": "Equipping Pretrained Unconditional Music Transformers with Instrument and Genre Controls",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:YsMSGLbcyi4C",
+        "authors": [
+          "Weihan Xu",
+          "Julian McAuley",
+          "Shlomo Dubnov",
+          "Hao-Wen Dong"
+        ],
+        "publication_date": "2023-12-15",
+        "conference": "2023 IEEE International Conference on Big Data (BigData)",
+        "pages": "4512-4517",
+        "publisher": "IEEE",
+        "description": "The \u201cpretraining-and-finetuning\u201d paradigm has become a norm for training domain-specific models in natural language processing and computer vision. In this work, we aim to examine this paradigm for symbolic music generation through leveraging the largest ever symbolic music dataset sourced from the MuseScore forum. We first pretrain a large unconditional transformer model using 1.5 million songs. We then propose a simple technique to equip this pretrained unconditional music transformer model with instrument and genre controls by finetuning the model with additional control tokens. Our proposed representation offers improved high-level controllability and expressiveness against two existing representations. The experimental results show that the proposed model can successfully generate music with user-specified instruments and genre. In a subjective listening test, the proposed model outperforms the\u00a0\u2026",
+        "total_citations": 1
+      },
+      {
+        "title": "Towards improving harmonic sensitivity and prediction stability for singing melody extraction",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:mVmsd5A6BfQC",
+        "authors": [
+          "Keren Shao",
+          "Ke Chen",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2023-08-04",
+        "description": "In deep learning research, many melody extraction models rely on redesigning neural network architectures to improve performance. In this paper, we propose an input feature modification and a training objective modification based on two assumptions. First, harmonics in the spectrograms of audio data decay rapidly along the frequency axis. To enhance the model's sensitivity on the trailing harmonics, we modify the Combined Frequency and Periodicity (CFP) representation using discrete z-transform. Second, the vocal and non-vocal segments with extremely short duration are uncommon. To ensure a more stable melody contour, we design a differentiable loss function that prevents the model from predicting such segments. We apply these modifications to several models, including MSNet, FTANet, and a newly introduced model, PianoNet, modified from a piano transcription network. Our experimental results demonstrate that the proposed modifications are empirically effective for singing melody extraction.",
+        "total_citations": 1
+      },
+      {
+        "title": "TeaserGen: Generating Teasers for Long Documentaries",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:8k81kl-MbHgC",
+        "authors": [
+          "Weihan Xu",
+          "Paul Pu Liang",
+          "Haven Kim",
+          "Julian McAuley",
+          "Taylor Berg-Kirkpatrick",
+          "Hao-Wen Dong"
+        ],
+        "publication_date": "2024-10-08",
+        "description": "Teasers are an effective tool for promoting content in entertainment, commercial and educational fields. However, creating an effective teaser for long videos is challenging for it requires long-range multimodal modeling on the input videos, while necessitating maintaining audiovisual alignments, managing scene changes and preserving factual accuracy for the output teasers. Due to the lack of a publicly-available dataset, progress along this research direction has been hindered. In this work, we present DocumentaryNet, a collection of 1,269 documentaries paired with their teasers, featuring multimodal data streams of video, speech, music, sound effects and narrations. With DocumentaryNet, we propose a new two-stage system for generating teasers from long documentaries. The proposed TeaserGen system first generates the teaser narration from the transcribed narration of the documentary using a pretrained large language model, and then selects the most relevant visual content to accompany the generated narration through language-vision models. For narration-video matching, we explore two approaches: a pretraining-based model using pretrained contrastive language-vision models and a deep sequential model that learns the mapping between the narrations and visuals. Our experimental results show that the pretraining-based approach is more effective at identifying relevant visual content than directly trained deep autoregressive models."
+      },
+      {
+        "title": "Presto! Distilling Steps and Layers for Accelerating Music Generation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:Se3iqnhoufwC",
+        "authors": [
+          "Zachary Novack",
+          "Ge Zhu",
+          "Jonah Casebeer",
+          "Julian McAuley",
+          "Taylor Berg-Kirkpatrick",
+          "Nicholas J Bryan"
+        ],
+        "publication_date": "2024-10-07",
+        "description": "Despite advances in diffusion-based text-to-music (TTM) methods, efficient, high-quality generation remains a challenge. We introduce Presto!, an approach to inference acceleration for score-based diffusion transformers via reducing both sampling steps and cost per step. To reduce steps, we develop a new score-based distribution matching distillation (DMD) method for the EDM-family of diffusion models, the first GAN-based distillation method for TTM. To reduce the cost per step, we develop a simple, but powerful improvement to a recent layer distillation method that improves learning via better preserving hidden state variance. Finally, we combine our step and layer distillation methods together for a dual-faceted approach. We evaluate our step and layer distillation methods independently and show each yield best-in-class performance. Our combined distillation method can generate high-quality outputs with improved diversity, accelerating our base model by 10-18x (230/435ms latency for 32 second mono/stereo 44.1kHz, 15x faster than comparable SOTA) -- the fastest high-quality TTM to our knowledge. Sound examples can be found at https://presto-music.github.io/web/."
+      },
+      {
+        "title": "Deriving Representative Structure Over Music Corpora",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:dhFuZR0502QC",
+        "authors": [
+          "Ilana Shapiro",
+          "Ruanqianqian Huang",
+          "Zachary Novack",
+          "Cheng-I Wang",
+          "Hao-Wen Dong",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov",
+          "Sorin Lerner"
+        ],
+        "publication_date": "2024-10-05",
+        "description": "Western music is an innately hierarchical system of interacting levels of structure, from fine-grained melody to high-level form. In order to analyze music compositions holistically and at multiple granularities, we propose a unified, hierarchical meta-representation of musical structure called the structural temporal graph (STG). For a single piece, the STG is a data structure that defines a hierarchy of progressively finer structural musical features and the temporal relationships between them. We use the STG to enable a novel approach for deriving a representative structural summary of a music corpus, which we formalize as a dually NP-hard combinatorial optimization problem. Our approach first applies simulated annealing to develop a measure of structural distance between two music pieces rooted in graph isomorphism. Our approach then combines the formal guarantees of SMT solvers with nested simulated annealing over structural distances to produce a structurally sound, representative centroid STG for an entire corpus of STGs obtained from individual pieces. To evaluate our approach, we conduct experiments showing that structural distance accurately differentiates between music pieces, and that our computed centroids encapsulate the overarching structure of a music corpus."
+      },
+      {
+        "title": "CoLLAP: Contrastive Long-form Language-Audio Pretraining with Musical Temporal Structure Augmentation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:eQOLeE2rZwMC",
+        "authors": [
+          "Junda Wu",
+          "Warren Li",
+          "Zachary Novack",
+          "Amit Namburi",
+          "Carol Chen",
+          "Julian McAuley"
+        ],
+        "publication_date": "2024-10-03",
+        "description": "Modeling temporal characteristics plays a significant role in the representation learning of audio waveform. We propose Contrastive Long-form Language-Audio Pretraining (\\textbf{CoLLAP}) to significantly extend the perception window for both the input audio (up to 5 minutes) and the language descriptions (exceeding 250 words), while enabling contrastive learning across modalities and temporal dynamics. Leveraging recent Music-LLMs to generate long-form music captions for full-length songs, augmented with musical temporal structures, we collect 51.3K audio-text pairs derived from the large-scale AudioSet training dataset, where the average audio length reaches 288 seconds. We propose a novel contrastive learning architecture that fuses language representations with structured audio representations by segmenting each song into clips and extracting their embeddings. With an attention mechanism, we capture multimodal temporal correlations, allowing the model to automatically weigh and enhance the final fusion score for improved contrastive alignment. Finally, we develop two variants of the CoLLAP model with different types of backbone language models. Through comprehensive experiments on multiple long-form music-text retrieval datasets, we demonstrate consistent performance improvement in retrieval accuracy compared with baselines. We also show the pretrained CoLLAP models can be transferred to various music information retrieval tasks, with heterogeneous long-form multimodal contexts."
+      },
+      {
+        "title": "Generating Symbolic Music from Natural Language Prompts using an LLM-Enhanced Dataset",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:WF5omc3nYNoC",
+        "authors": [
+          "Weihan Xu",
+          "Julian McAuley",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov",
+          "Hao-Wen Dong"
+        ],
+        "publication_date": "2024-10-02",
+        "description": "Recent years have seen many audio-domain text-to-music generation models that rely on large amounts of text-audio pairs for training. However, symbolic-domain controllable music generation has lagged behind partly due to the lack of a large-scale symbolic music dataset with extensive metadata and captions. In this work, we present MetaScore, a new dataset consisting of 963K musical scores paired with rich metadata, including free-form user-annotated tags, collected from an online music forum. To approach text-to-music generation, we leverage a pretrained large language model (LLM) to generate pseudo natural language captions from the metadata. With the LLM-enhanced MetaScore, we train a text-conditioned music generation model that learns to generate symbolic music from the pseudo captions, allowing control of instruments, genre, composer, complexity and other free-form music descriptors. In addition, we train a tag-conditioned system that supports a predefined set of tags available in MetaScore. Our experimental results show that both the proposed text-to-music and tags-to-music models outperform a baseline text-to-music model in a listening test, while the text-based system offers a more natural interface that allows free-form natural language prompts."
+      },
+      {
+        "title": "ViolinDiff: Enhancing Expressive Violin Synthesis with Pitch Bend Conditioning",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:7PzlFSSx8tAC",
+        "authors": [
+          "Daewoong Kim",
+          "Hao-Wen Dong",
+          "Dasaem Jeong"
+        ],
+        "publication_date": "2024-09-19",
+        "description": "Modeling the natural contour of fundamental frequency (F0) plays a critical role in music audio synthesis. However, transcribing and managing multiple F0 contours in polyphonic music is challenging, and explicit F0 contour modeling has not yet been explored for polyphonic instrumental synthesis. In this paper, we present ViolinDiff, a two-stage diffusion-based synthesis framework. For a given violin MIDI file, the first stage estimates the F0 contour as pitch bend information, and the second stage generates mel spectrogram incorporating these expressive details. The quantitative metrics and listening test results show that the proposed model generates more realistic violin sounds than the model without explicit pitch bend modeling. Audio samples are available online: daewoung.github.io/ViolinDiff-Demo."
+      },
+      {
+        "title": "PDMX: A Large-Scale Public Domain MusicXML Dataset for Symbolic Music Processing",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:9yKSN-GCB0IC",
+        "authors": [
+          "Phillip Long",
+          "Zachary Novack",
+          "Taylor Berg-Kirkpatrick",
+          "Julian McAuley"
+        ],
+        "publication_date": "2024-09-17",
+        "description": "The recent explosion of generative AI-Music systems has raised numerous concerns over data copyright, licensing music from musicians, and the conflict between open-source AI and large prestige companies. Such issues highlight the need for publicly available, copyright-free musical data, in which there is a large shortage, particularly for symbolic music data. To alleviate this issue, we present PDMX: a large-scale open-source dataset of over 250K public domain MusicXML scores collected from the score-sharing forum MuseScore, making it the largest available copyright-free symbolic music dataset to our knowledge. PDMX additionally includes a wealth of both tag and user interaction metadata, allowing us to efficiently analyze the dataset and filter for high quality user-generated scores. Given the additional metadata afforded by our data collection process, we conduct multitrack music generation experiments evaluating how different representative subsets of PDMX lead to different behaviors in downstream models, and how user-rating statistics can be used as an effective measure of data quality. Examples can be found at https://pnlong.github.io/PDMX.demo/."
+      },
+      {
+        "title": "Creativity and Visual Communication from Machine to Musician: Sharing a Score through a Robotic Camera",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:hC7cP41nSMkC",
+        "authors": [
+          "Ross Greer",
+          "Laura Fleig",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2024-09-09",
+        "description": "This paper explores the integration of visual communication and musical interaction by implementing a robotic camera within a \"Guided Harmony\" musical game. We aim to examine co-creative behaviors between human musicians and robotic systems. Our research explores existing methodologies like improvisational game pieces and extends these concepts to include robotic participation using a PTZ camera. The robotic system interprets and responds to nonverbal cues from musicians, creating a collaborative and adaptive musical experience. This initial case study underscores the importance of intuitive visual communication channels. We also propose future research directions, including parameters for refining the visual cue toolkit and data collection methods to understand human-machine co-creativity further. Our findings contribute to the broader understanding of machine intelligence in augmenting human creativity, particularly in musical settings."
+      },
+      {
+        "title": "Improving Generalization of Speech Separation in Real-World Scenarios: Strategies in Simulation, Optimization, and Evaluation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:qxL8FJ1GzNcC",
+        "authors": [
+          "Ke Chen",
+          "Jiaqi Su",
+          "Taylor Berg-Kirkpatrick",
+          "Shlomo Dubnov",
+          "Zeyu Jin"
+        ],
+        "publication_date": "2024-08-28",
+        "description": "Achieving robust speech separation for overlapping speakers in various acoustic environments with noise and reverberation remains an open challenge. Although existing datasets are available to train separators for specific scenarios, they do not effectively generalize across diverse real-world scenarios. In this paper, we present a novel data simulation pipeline that produces diverse training data from a range of acoustic environments and content, and propose new training paradigms to improve quality of a general speech separation model. Specifically, we first introduce AC-SIM, a data simulation pipeline that incorporates broad variations in both content and acoustics. Then we integrate multiple training objectives into the permutation invariant training (PIT) to enhance separation quality and generalization of the trained model. Finally, we conduct comprehensive objective and human listening experiments across separation architectures and benchmarks to validate our methods, demonstrating substantial improvement of generalization on both non-homologous and real-world test sets."
+      },
+      {
+        "title": "LyCon: Lyrics Reconstruction from the Bag-of-Words Using Large Language Models",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:UeHWp8X0CEIC",
+        "authors": [
+          "Haven Kim",
+          "Kahyun Choi"
+        ],
+        "publication_date": "2024-08-27",
+        "description": "This paper addresses the unique challenge of conducting research in lyric studies, where direct use of lyrics is often restricted due to copyright concerns. Unlike typical data, internet-sourced lyrics are frequently protected under copyright law, necessitating alternative approaches. Our study introduces a novel method for generating copyright-free lyrics from publicly available Bag-of-Words (BoW) datasets, which contain the vocabulary of lyrics but not the lyrics themselves. Utilizing metadata associated with BoW datasets and large language models, we successfully reconstructed lyrics. We have compiled and made available a dataset of reconstructed lyrics, LyCon, aligned with metadata from renowned sources including the Million Song Dataset, Deezer Mood Detection Dataset, and AllMusic Genre Dataset, available for public access. We believe that the integration of metadata such as mood annotations or genres enables a variety of academic experiments on lyrics, such as conditional lyric generation."
+      },
+      {
+        "title": "Nested Music Transformer: Sequentially Decoding Compound Tokens in Symbolic Music and Audio Generation",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:L8Ckcad2t8MC",
+        "authors": [
+          "Jiwoo Ryu",
+          "Hao-Wen Dong",
+          "Jongmin Jung",
+          "Dasaem Jeong"
+        ],
+        "publication_date": "2024-08-02",
+        "description": "Representing symbolic music with compound tokens, where each token consists of several different sub-tokens representing a distinct musical feature or attribute, offers the advantage of reducing sequence length. While previous research has validated the efficacy of compound tokens in music sequence modeling, predicting all sub-tokens simultaneously can lead to suboptimal results as it may not fully capture the interdependencies between them. We introduce the Nested Music Transformer (NMT), an architecture tailored for decoding compound tokens autoregressively, similar to processing flattened tokens, but with low memory usage. The NMT consists of two transformers: the main decoder that models a sequence of compound tokens and the sub-decoder for modeling sub-tokens of each compound token. The experiment results showed that applying the NMT to compound tokens can enhance the performance in terms of better perplexity in processing various symbolic music datasets and discrete audio tokens from the MAESTRO dataset."
+      },
+      {
+        "title": "Generative AI for Music and Audio",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:MXK_kJrjxJIC",
+        "authors": [
+          "Hao-Wen Dong"
+        ],
+        "publication_date": "2024-10-16",
+        "description": "Generative AI has been transforming the way we interact with technology and consume content. In the next decade, AI technology will reshape how we create audio content in various media, including music, theater, films, games, podcasts, and short videos. In this dissertation, I introduce the three main directions of my research centered around generative AI for music and audio: 1) multitrack music generation, 2) assistive music creation tools, and 3) multimodal learning for audio and music. Through my research, I aim to answer the following two fundamental questions: 1) How can AI help professionals or amateurs create music and audio content? 2) Can AI learn to create music in a way similar to how humans learn music? My long-term goal is to lower the barrier of entry for music composition and democratize audio content creation."
+      },
+      {
+        "title": "Unsupervised Lead Sheet Generation via Semantic Compression",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:2osOgNQ5qMEC",
+        "authors": [
+          "Zachary Novack",
+          "Nikita Srivatsan",
+          "Taylor Berg-Kirkpatrick",
+          "Julian McAuley"
+        ],
+        "publication_date": "2023-10-16",
+        "description": "Lead sheets have become commonplace in generative music research, being used as an initial compressed representation for downstream tasks like multitrack music generation and automatic arrangement. Despite this, researchers have often fallen back on deterministic reduction methods (such as the skyline algorithm) to generate lead sheets when seeking paired lead sheets and full scores, with little attention being paid toward the quality of the lead sheets themselves and how they accurately reflect their orchestrated counterparts. To address these issues, we propose the problem of conditional lead sheet generation (i.e. generating a lead sheet given its full score version), and show that this task can be formulated as an unsupervised music compression task, where the lead sheet represents a compressed latent version of the score. We introduce a novel model, called Lead-AE, that models the lead sheets as a discrete subselection of the original sequence, using a differentiable top-k operator to allow for controllable local sparsity constraints. Across both automatic proxy tasks and direct human evaluations, we find that our method improves upon the established deterministic baseline and produces coherent reductions of large multitrack scores."
+      },
+      {
+        "title": "Continuous Melody Generation via Disentangled Short-Term Representations and Structural",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:9ZlFYXVOiuMC",
+        "authors": [
+          "Ke Chen",
+          "Gus Xia",
+          "Shlomo Dubnov"
+        ],
+        "publication_date": "2020-02-01",
+        "description": "Automatic music generation is an interdisciplinary research topic that combines computational creativity and semantic analysis of music to create automatic machine improvisations. An important property of such a system is allowing the user to specify conditions and desired properties of the generated music. In this paper we designed a model for composing melodies given a user specified symbolic scenario combined with a previous music context. We add manual labeled vectors denoting external music quality in terms of chord function that provides a low dimensional representation of the harmonic tension and resolution. Our model is capable of generating long melodies by regarding 8-beat note sequences as basic units, and shares consistent rhythm pattern structure with another specific song. The model contains two stages and requires separate training where the first stage adopts a Conditional Variational\u00a0\u2026"
+      },
+      {
+        "title": "Deep Musical Information Dynamics: Novel Framework for Reduced Neural-Network Music",
+        "link": "/citations?view_op=view_citation&hl=en&user=QNXCv34AAAAJ&pagesize=100&citation_for_view=QNXCv34AAAAJ:QIV2ME_5wuYC",
+        "authors": [
+          "Shlomo Dubnov",
+          "Ke Chen",
+          "Kevin Huang"
+        ],
+        "description": "In this paper we use a recently proposed framework called Deep Musical Information Dynamics (DMID) to explore information contents of deep neural models of music by applying bit-rate reduction to latent representations that are used to generate the musical surface. Our approach is partially motivated by rate-distortion theories of human cognition that claim that in order to deal with the complexity of sensory information some information must be lost or discarded in the act of perception. When lossy encoding is done over time, this may alter the anticipations that are formed within and across voices at different levels of representation of the musical structure. Moreover, we postulate that a goal of a musical machine learning system, and possibly human musical learning system, is learning a latent representation that \u201cexplains out\u201d most of the Information Dynamics of the Musical surface. This assumption is explored in DMID through several experiments on symbolic (MIDI) and acoustic (spectral) music representations using a Variational Auto Encoding scheme with an additional bit-rate reduction step. Our results suggest that higher mutual information can be found between latent representations encoded with reduced rates. The DMID framework is significant for studies of computational creative music systems since it allows exploration of information relations in latent and surface levels of musical data in a quantifiable and computationally tractable manner."
+      }
+    ]
+  }
+]

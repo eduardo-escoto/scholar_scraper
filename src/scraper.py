@@ -1,15 +1,21 @@
 import time
 import argparse
-from urllib import request
-from urllib.parse import urlparse, parse_qs
+import requests
+import json
+import validators
+import pprint
+
+from urllib.parse import urlparse, parse_qs, urlencode
 from random import gauss
 
 from bs4 import BeautifulSoup
 from collections import defaultdict
 
-SCRAPE_TIMEOUT_SECONDS = 1.25
+SCRAPE_TIMEOUT_SECONDS = 3
 
 SCHOLAR_BASE_URL = 'https://scholar.google.com/'
+
+MAKE_HEADERS = lambda: {'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:131.0) Gecko/20100101 Firefox/131.0'} 
 
 page_layout_tags = {
     'citation_table': 'gsc_a_b',
@@ -49,20 +55,55 @@ parser = argparse.ArgumentParser(
                     description='Scraper google scholar for given input',
                     epilog='made by ed :3')
 
-parser.add_argument('-f', '--file', help="CSV file To use as input, use with -c option to specify the column name to use", required=True)
-parser.add_argument('-c', '--column', help="Column name with google scholar profile links", required=True)
+parser.add_argument('-f', '--file', help="CSV file To use as input, use with -c option to specify the column name to use")
+parser.add_argument('-c', '--column', help="Column name with google scholar profile links")
+parser.add_argument('-o', '--output', help="output json path")
+parser.add_argument('-l', '--link')
 
-def read_page_and_get_soup(url):
-    html_doc = request.urlopen(url).read()
-    return BeautifulSoup(html_doc, 'html.parser')
+def read_page_and_get_soup(url, session=None):
+    if session is None:
+        session = requests.Session()
+    html_doc = session.get(url, headers=MAKE_HEADERS()).text
+    return BeautifulSoup(html_doc, 'html.parser'), session
 
 def extract_links_from_csv(path, column):
     from pandas import read_csv
     return read_csv(path)[column].to_list()
 
-def get_works_from_person(person_soup):
+def rand_sleep():
+    time.sleep(SCRAPE_TIMEOUT_SECONDS + gauss(mu = 0.0, sigma = 0.5))
+
+
+def get_all_works_from_person_page(link, page_size = 100, session=None):
+    works_list = []
+    make_page_params = lambda start: {'cstart': start, 'pagesize': page_size}
+
+    if session is None:
+        session = requests.Session()
+
+    counter = 0
+    show_more = True
+    while show_more:
+        if counter > 0:
+            rand_sleep()
+        print(f'STARTING ITER: {counter}')
+        paged_url = f'{link}&{urlencode(make_page_params(start=counter*page_size))}'
+        counter += 1
+
+        print(f'{counter}: {paged_url}')
+
+        response = session.post(paged_url, headers=MAKE_HEADERS())
+        person_soup = BeautifulSoup(response.text, 'html.parser')
+        works = get_works_from_person_soup(person_soup)
+        works_list.append(works)
+        
+        show_more = len(works) == page_size
+
+    return [work for works in works_list for work in works], session
+
+def get_works_from_person_soup(person_soup):
     works = []
-    for table_row in person_soup.find(id=page_layout_tags['citation_table']).findAll('tr', recursive=False):
+    for table_row in person_soup.body.find(id=page_layout_tags['citation_table']).findAll('tr', recursive=False):
         work = {}
         for table_column in table_row.findAll('td', recursive=False):
             if page_layout_tags['work_info_row'] in table_column['class']:
@@ -95,27 +136,39 @@ def get_scholar_id_from_url(url):
 
 if __name__ == '__main__':
     args = parser.parse_args()
-    url_list = extract_links_from_csv(args.file, args.column)
-    all_data = []
-    for url in url_list[0:1]:
-        print(url)
-        person_soup = read_page_and_get_soup(url)
-        name = get_name_from_person(person_soup)
-        scholar_id = get_scholar_id_from_url(url)
-        # print(person_soup.prettify())
-        time.sleep(SCRAPE_TIMEOUT_SECONDS + gauss(mu = 0.0, sigma = 0.01))
+    url_list = []
+    if args.file is not None and args.column is not None:
+        url_list = extract_links_from_csv(args.file, args.column)
+    elif args.link:
+        url_list = [args.link]
 
-        works = get_works_from_person(person_soup)
-        for i, work in enumerate(works[0:3]):
-            work_page = read_page_and_get_soup(SCHOLAR_BASE_URL + work['link'])
-            work = scrape_work_data(work_page, work)
-            works[i] = work
-            time.sleep(SCRAPE_TIMEOUT_SECONDS + gauss(mu = 0.0, sigma = 0.01))
-        
-        all_data.append({
-            "name": name,
-            "scholar_id": scholar_id,
-            "publications": works
-        })
+    all_data = []
+    for url in url_list:
+        if validators.url(url):
+            print(f'Starting to Parse: {url}')
+            
+            person_soup, session = read_page_and_get_soup(url)
+            name = get_name_from_person(person_soup)
+            scholar_id = get_scholar_id_from_url(url)
+
+            rand_sleep()
+            print(f'Getting works for: {name} at {scholar_id}')
+            works, session = get_all_works_from_person_page(url, session=session)
+            for i, work in enumerate(works):
+                print(f'Scraping work: {i}: {work['title']}')
+                work_page, session = read_page_and_get_soup(SCHOLAR_BASE_URL + work['link'], session=session)
+                work = scrape_work_data(work_page, work)
+                works[i] = work
+                rand_sleep()
+            
+            all_data.append({
+                "name": name,
+                "scholar_id": scholar_id,
+                "publications": works
+            })
+    if args.output is not None:
+        with open(args.output, 'w') as outfile:
+            json.dump(all_data, outfile, indent=2, sort_keys=False)
+    else:
+        pprint(all_data)
     
-    print(all_data[0])
